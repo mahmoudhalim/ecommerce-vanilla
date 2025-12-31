@@ -1,8 +1,9 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `<nav class="navbar navbar-expand-lg navbar-light">
+    const user = JSON.parse(localStorage.getItem("user"));
+    this.innerHTML = `<nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a href="#" class="navbar-brand">
+        <a href="/" class="navbar-brand">
           <img src="assets/images/logo.png" width="100" />
         </a>
 
@@ -22,13 +23,31 @@ class Navbar extends HTMLElement {
           </ul>
 
           <div class="ms-auto d-flex gap-2">
-            <a class="btn btn-outline-primary">Sign in</a>
-            <a href="register.html" class="btn btn-primary">Join now</a>
+            ${
+              user
+                ? `
+                <div class="d-flex align-items-center">
+                  <span class="navbar-text me-3">Welcome, ${user.name}</span>
+                  <button id="logout-btn" class="btn btn-outline-primary">Logout</button>
+                </div>
+              `
+                : `
+                <a href="login.html" class="btn btn-outline-primary">Sign in</a>
+                <a href="register.html" class="btn btn-primary">Join now</a>
+              `
+            }
           </div>
         </div>
       </div>
     </nav>
     `;
+    if (user) {
+      this.querySelector("#logout-btn").addEventListener("click", this.logout);
+    }
+  }
+  logout() {
+    localStorage.removeItem("user");
+    window.location.href = "index.html";
   }
 }
 customElements.define("nav-bar", Navbar);
