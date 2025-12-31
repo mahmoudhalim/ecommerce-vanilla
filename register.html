@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Register | Coffee House</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,70 +12,127 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.2.0/bcrypt.min.js"
+      integrity="sha512-BJZhA/ftU3DVJvbBMWZwp7hXc49RJHq0xH81tTgLlG16/OkDq7VbNX6nUnx+QY4bBZkXtJoG0b0qihuia64X0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
     <script type="module" src="js/components/nav-bar.js" defer></script>
     <script type="module" src="js/components/footer.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/register.js" defer></script>
   </head>
   <body>
     <nav-bar id="navbar"></nav-bar>
-    <div
-      class="register-form container bg-transparent shadow-lg m-5 p-0 rounded-3"
-    >
-      <form method="post" action="#" class="p-3">
+    <div class="form container bg-white shadow-lg my-5 rounded-3">
+      <form method="post" action="#" class="p-5">
         <div class="mb-5">
-          <h2 class="pt-5 ps-5" style="color: #5B3B2E;">Sign Up</h2>
-          <p class="form-text ps-5">
-            Already have an account? <a href="login.html" style="text-decoration: none; color: #5B3B2E;" >Sign in</a>
+          <h2 style="color: #5b3b2e">Sign Up</h2>
+          <p class="form-text">
+            Already have an account?
+            <a
+              href="login.html"
+              style="text-decoration: none; color: #5b3b2e; font-weight: bold"
+              >Sign in</a
+            >
           </p>
         </div>
-        <div class="row align-items-center mb-3">
-          <div class="col-md-3">
-            <label for="name" class="form-label ms-1 ps-5 mb-1"> Full Name</label>
+
+        <div class="row g-4 mb-3">
+          <div class="col-md-4">
+            <label for="name" class="form-label fw-bold">Full Name</label>
             <input
               type="text"
-              class="form-control ms-5 rounded-5"
+              class="form-control rounded-5 px-3"
               id="name"
+              name="name"
               placeholder="Enter your full name"
             />
+            <ul class="form-text requirements mt-2 list-unstyled" id="name-req">
+              <li data-rule="min">At least 5 characters</li>
+            </ul>
           </div>
 
-          <div class="col-md-3">
-            <label for="email" class="form-label ms-1 ps-5"> Email</label>
+          <div class="col-md-4">
+            <label for="email" class="form-label fw-bold">Email</label>
             <input
-              type="text"
-              class="form-control ms-5 rounded-5"
-              id="mail"
+              type="email"
+              class="form-control rounded-5 px-3"
+              id="email"
+              name="email"
               placeholder="Enter your email"
             />
+            <ul
+              class="form-text requirements mt-2 list-unstyled"
+              id="email-req"
+            >
+              <li data-rule="format">Valid email format</li>
+              <li data-rule="unique">Email must be unique</li>
+            </ul>
           </div>
         </div>
-        <div class="row align-items-center mb-3">
-          <div class="col-md-3">
-            <label for="password" class="form-label ms-1 ps-5"> Password</label>
+
+        <div class="row g-4 mb-4">
+          <div class="col-md-4">
+            <label for="password" class="form-label fw-bold">Password</label>
             <input
               type="password"
-              class="form-control ms-5 rounded-5"
+              class="form-control rounded-5 px-3"
               id="password"
+              name="password"
+              placeholder="Enter your password"
             />
+            <ul
+              class="form-text requirements mt-2 list-unstyled"
+              id="password-req"
+            >
+              <li data-rule="length">At least 8 characters</li>
+              <li data-rule="upper">One uppercase letter</li>
+              <li data-rule="lower">One lowercase letter</li>
+              <li data-rule="special">One special character</li>
+            </ul>
           </div>
-          <div class="col-md-3">
-            <label for="connfirm-password" class="form-label ms-1 ps-5"
+
+          <div class="col-md-4">
+            <label for="confirm-password" class="form-label fw-bold"
               >Confirm Password</label
             >
             <input
               type="password"
-              class="form-control ms-5 rounded-5"
+              class="form-control rounded-5 px-3"
               id="confirm-password"
+              name="confirmPassword"
+              placeholder="Confirm your password"
             />
+            <ul
+              class="form-text requirements mt-2 list-unstyled"
+              id="confirm-req"
+            >
+              <li data-rule="match">Passwords match</li>
+            </ul>
           </div>
         </div>
-        <div class="d-flex ps-5 ms-1">
-          <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        <div class="mt-4">
+          <button
+            type="submit"
+            id="submit-btn"
+            class="btn btn-dark px-5 rounded-5"
+            disabled
+          >
+            Sign Up
+          </button>
         </div>
       </form>
     </div>

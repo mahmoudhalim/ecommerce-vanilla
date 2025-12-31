@@ -161,4 +161,19 @@ hr {
 .register-form {
   width: 85%;
   justify-self: center;
+  .requirements {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .requirements {
+    list-style: none;
+    padding-left: 1rem;
+    li {
+      color: #dc3545;
+      &.valid {
+        color: #198754;
+      }
+    }
+  }
 }
