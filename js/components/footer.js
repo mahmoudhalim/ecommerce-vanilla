@@ -61,7 +61,7 @@ class Footer extends HTMLElement {
           </div>
         </div>
         <hr />
-        <div class="copyright">@2025 Coffee house all right reserve</div>
+        <div class="copyright">@2025 Coffee house all right reserved</div>
       </div>
     </footer>`;
   }
