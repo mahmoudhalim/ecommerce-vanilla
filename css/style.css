@@ -1,7 +1,5 @@
-nav-bar {
-  display: block;
-  background-color: #faf5ee;
-}
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
+
 body {
   background-color: #faf5ee;
 }
@@ -67,10 +65,16 @@ nav-bar .btn-outline-primary:active {
 nav-bar .nav-link {
   color: #42291e;
   cursor: pointer;
+.shop-interior {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 10rem;
 }
 
-nav-bar .nav-link:hover {
-  color: #ba846d;
+.headline {
+  color: #3b261d;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 7px;
 }
 .custom-footer {
   background-color: #1a0f0a;
