@@ -214,6 +214,51 @@ nav-bar {
     font-weight: 400;
   }
 
+  .product-carousel {
+    position: relative;
+  }
+
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #42291e;
+    color: #faf5ee;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 18px;
+
+    &:hover {
+      background-color: #5b3b2e;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+  }
+
+  .carousel-btn-prev {
+    left: -20px;
+  }
+
+  .carousel-btn-next {
+    right: -20px;
+  }
+
+  #products-container {
+    transition: transform 0.5s ease-in-out;
+  }
+
   .card {
     background: #f3eee7;
     border: none;
