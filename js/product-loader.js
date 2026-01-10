@@ -25,6 +25,7 @@ class ProductLoader {
     productsToShow.forEach(product => {
       const productCard = document.createElement('product-card');
       productCard.className = 'col-12 col-md-6 col-lg-3';
+      productCard.setAttribute('data-product-id', product.id);
       productCard.setAttribute('image', product.image);
       productCard.setAttribute('name', product.name);
       productCard.setAttribute('price', product.basePrice);
