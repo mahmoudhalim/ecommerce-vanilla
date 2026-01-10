@@ -259,9 +259,11 @@ nav-bar {
     transition: transform 0.5s ease-in-out;
   }
 
+}
+
   .card {
     background: #f3eee7;
-    border: none;
+    border: 1px solid #d2b48c; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -290,7 +292,141 @@ nav-bar {
       }
     }
   }
+
+
+.categories-header{
+  background-color: #FAF5EE !important;
+  width: 85%;
 }
+
+.filter-sidebar {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  color: #42291e !important;
+  overflow-y: auto;
+  border: 1px solid #42291e;
+  border-radius: 5px;
+  background-color: #FAF0E0 !important;
+  .filter-section {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .filter-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .form-check {
+    margin-bottom: 0.5rem;
+ 
+    .form-check-input {
+      &:checked {
+        background-color: #42291e;
+        border-color: #42291e;
+      }
+      
+      &:focus {
+        border-color: #42291e;
+        box-shadow: 0 0 0 0.2rem rgba(66, 41, 30, 0.25);
+      }
+    }
+    
+    .form-check-label {
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+  }
+  
+  .price-range-container {
+    .form-control-sm {
+      border-radius: 6px;
+      border: 1px solid #ced4da;
+      
+      &:focus {
+        border-color: #d2b48c;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.search-bar {
+  .input-group {
+    .input-group-text {
+      background-color: white;
+      border-right: none;
+      color: #6c757d;
+    }
+    
+    .form-control {
+      border-left: none;
+      
+      &:focus {
+        border-color: #d2b48c;
+        box-shadow: none;
+      }
+      
+      &::placeholder {
+        color: #adb5bd;
+      }
+    }
+  }
+}
+
+/* List View Styles */
+.list-view {
+  .product-list-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .img-fluid {
+      height: 80px;
+      object-fit: cover;
+    }
+    
+    .card-title {
+      color: #42291e;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* No Results State */
+#no-results {
+  i {
+    font-size: 4rem;
+    color: #dee2e6;
+  }
+  
+  h4 {
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  p {
+    color: #adb5bd;
+  }
+}
+
 
 .coffee-section {
   .coffee-text {
