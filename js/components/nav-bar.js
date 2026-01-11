@@ -1,6 +1,8 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
     const user = JSON.parse(localStorage.getItem("user"));
+    const itemCount = this.getCartItemCount();
+    
     this.innerHTML = `<nav class="navbar navbar-expand-lg">
       <div class="container">
         <a href="/" class="navbar-brand">
@@ -22,10 +24,16 @@ class Navbar extends HTMLElement {
             <li class="nav-item"><a class="nav-link">About</a></li>
           </ul>
 
-          <div class="ms-auto d-flex gap-2">
+          <div class="ms-auto d-flex gap-2 align-items-center">
             ${
               user
                 ? `
+                <a href="cart.html" class="btn btn-outline-secondary position-relative">
+                  <i class="bi bi-cart3"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-badge">
+                    ${itemCount}
+                  </span>
+                </a>
                 <div class="d-flex align-items-center">
                   <span class="navbar-text me-3">Welcome, ${user.name}</span>
                   <button id="logout-btn" class="btn btn-outline-primary">Logout</button>
@@ -43,6 +51,25 @@ class Navbar extends HTMLElement {
     `;
     if (user) {
       this.querySelector("#logout-btn").addEventListener("click", this.logout);
+      this.setupCartListener();
+    }
+  }
+
+  getCartItemCount() {
+    if (!window.cartManager || !window.cartManager.isLoggedIn()) return 0;
+    return window.cartManager.getItemCount();
+  }
+
+  setupCartListener() {
+    // Update cart count on page load
+    this.updateCartCount();
+  }
+
+  updateCartCount() {
+    const badge = this.querySelector('#cart-badge');
+    if (badge) {
+      const itemCount = this.getCartItemCount();
+      badge.textContent = itemCount;
     }
   }
   logout() {
