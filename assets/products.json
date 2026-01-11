@@ -4,7 +4,7 @@
     "name": "Classic Brew",
     "category": "coffee",
     "basePrice": 100,
-    "image": "/assets/images/classic-brew.png",
+    "image": "assets/images/classic-brew.png",
     "description": "Our signature classic brew is made from the finest roasted beans, offering a rich and smooth flavor that awakens your senses. Perfect for starting your day with a comforting cup. Enjoy it black or with a splash of milk for a personalized touch.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -17,7 +17,7 @@
     "name": "Velvet Latte",
     "category": "coffee",
     "basePrice": 150,
-    "image": "/assets/images/velvet-latte.png",
+    "image": "assets/images/velvet-latte.png",
     "description": "Indulge in the creamy texture of our velvet latte, blended with steamed milk and a hint of vanilla. It's a cozy embrace in every sip, ideal for those chilly mornings. Pair it with a pastry for the ultimate café experience.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -30,7 +30,7 @@
     "name": "Espresso Shot",
     "category": "coffee",
     "basePrice": 80,
-    "image": "/assets/images/espresso-shot.png",
+    "image": "assets/images/espresso-shot.png",
     "description": "A bold and intense espresso shot, crafted from premium beans for that quick caffeine boost. Its robust flavor lingers delightfully on your palate. Perfect for espresso lovers seeking purity in every drop.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -43,7 +43,7 @@
     "name": "Caramel Swirl",
     "category": "coffee",
     "basePrice": 180,
-    "image": "/assets/images/caramel-swirl.png",
+    "image": "assets/images/caramel-swirl.png",
     "description": "Swirls of caramel blend seamlessly with our smooth coffee in this delightful treat. It's sweet, creamy, and utterly satisfying for any time of day. Let it transport you to a world of cozy indulgence.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -56,7 +56,7 @@
     "name": "Mocha Delight",
     "category": "coffee",
     "basePrice": 200,
-    "image": "/assets/images/mocha-delight.png",
+    "image": "assets/images/mocha-delight.png",
     "description": "Rich chocolate meets bold coffee in our mocha delight, topped with whipped cream for extra decadence. It's like a hug in a mug, perfect for chocolate enthusiasts. Savor the harmonious blend of flavors with every sip.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -69,7 +69,7 @@
     "name": "Hazelnut Brew",
     "category": "coffee",
     "basePrice": 160,
-    "image": "/assets/images/hazelnut-brew.png",
+    "image": "assets/images/hazelnut-brew.png",
     "description": "Infused with nutty hazelnut essence, this brew offers a warm and inviting aroma. It's smooth and flavorful, making it a favorite among nut lovers. Enjoy it as a comforting companion to your daily routine.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -82,7 +82,7 @@
     "name": "Vanilla Cappuccino",
     "category": "coffee",
     "basePrice": 170,
-    "image": "/assets/images/vanilla-cappuccino.png",
+    "image": "assets/images/vanilla-cappuccino.png",
     "description": "Frothy milk crowns our vanilla cappuccino, creating a light and airy delight. The subtle vanilla notes enhance the espresso base beautifully. It's a classic choice for a refined café moment.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -95,7 +95,7 @@
     "name": "Americano Blend",
     "category": "coffee",
     "basePrice": 120,
-    "image": "/assets/images/americano-blend.png",
+    "image": "assets/images/americano-blend.png",
     "description": "Our americano blend dilutes strong espresso with hot water for a milder taste. It's clean, crisp, and full-bodied, ideal for those who prefer a straightforward coffee. Relish its simplicity in every cup.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -108,7 +108,7 @@
     "name": "Cinnamon Latte",
     "category": "coffee",
     "basePrice": 190,
-    "image": "/assets/images/cinnamon-latte.png",
+    "image": "assets/images/cinnamon-latte.png",
     "description": "A dash of cinnamon spices up our creamy latte, evoking warm autumn vibes. It's comforting and aromatic, perfect for cozy gatherings. Let the spice dance on your taste buds.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -121,7 +121,7 @@
     "name": "Dark Roast",
     "category": "coffee",
     "basePrice": 110,
-    "image": "/assets/images/dark-roast.png",
+    "image": "assets/images/dark-roast.png",
     "description": "Bold and smoky, our dark roast delivers deep flavors from carefully selected beans. It's robust yet smooth, appealing to those who love intensity. A staple for true coffee aficionados.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -134,7 +134,7 @@
     "name": "Green Leaf Tea",
     "category": "tea",
     "basePrice": 90,
-    "image": "/assets/images/green-leaf-tea.png",
+    "image": "assets/images/green-leaf-tea.png",
     "description": "Fresh green leaves steep to create a light and refreshing tea. Its subtle grassy notes promote relaxation and wellness. Ideal for a peaceful afternoon break.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -147,7 +147,7 @@
     "name": "Chamomile Calm",
     "category": "tea",
     "basePrice": 130,
-    "image": "/assets/images/chamomile-calm.png",
+    "image": "assets/images/chamomile-calm.png",
     "description": "Soothing chamomile flowers brew into a gentle, floral infusion. It's perfect for unwinding after a long day, with hints of apple-like sweetness. Embrace the tranquility it brings.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -160,7 +160,7 @@
     "name": "Peppermint Fresh",
     "category": "tea",
     "basePrice": 100,
-    "image": "/assets/images/peppermint-fresh.png",
+    "image": "assets/images/peppermint-fresh.png",
     "description": "Cool peppermint leaves create a refreshing and minty brew. It's revitalizing and aids digestion naturally. A great choice for a clean, crisp palate.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -173,7 +173,7 @@
     "name": "Jasmine Bloom",
     "category": "tea",
     "basePrice": 150,
-    "image": "/assets/images/jasmine-bloom.png",
+    "image": "assets/images/jasmine-bloom.png",
     "description": "Delicate jasmine flowers infuse green tea with floral elegance. It's light and fragrant, evoking serene gardens. Perfect for moments of quiet reflection.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -186,7 +186,7 @@
     "name": "Ginger Spice Tea",
     "category": "tea",
     "basePrice": 160,
-    "image": "/assets/images/ginger-spice-tea.png",
+    "image": "assets/images/ginger-spice-tea.png",
     "description": "Zesty ginger warms this spicy tea blend, perfect for boosting immunity. Its bold flavor is balanced with subtle sweetness. Enjoy it for a invigorating lift.",
     "options": {
       "size": ["Small", "Medium", "Large"],
@@ -199,7 +199,7 @@
     "name": "Butter Croissant",
     "category": "food",
     "basePrice": 80,
-    "image": "/assets/images/butter-croissant.png",
+    "image": "assets/images/butter-croissant.png",
     "description": "Flaky layers of buttery pastry make our croissant irresistible. It's light yet indulgent, perfect with coffee. Baked fresh daily for that authentic café feel.",
     "options": {
       "size": ["Small", "Medium", "Large"]
@@ -210,7 +210,7 @@
     "name": "Chocolate Muffin",
     "category": "food",
     "basePrice": 120,
-    "image": "/assets/images/chocolate-muffin.png",
+    "image": "assets/images/chocolate-muffin.png",
     "description": "Moist and chocolaty, this muffin is packed with cocoa goodness. It's a sweet treat that melts in your mouth. Ideal for satisfying your chocolate cravings.",
     "options": {
       "size": ["Small", "Medium", "Large"]
@@ -221,7 +221,7 @@
     "name": "Cheese Sandwich",
     "category": "food",
     "basePrice": 200,
-    "image": "/assets/images/cheese-sandwich.png",
+    "image": "assets/images/cheese-sandwich.png",
     "description": "Creamy cheese between toasted bread slices, simple yet delicious. It's hearty and comforting, great for lunch. Made with quality ingredients for maximum flavor.",
     "options": {
       "size": ["Small", "Medium", "Large"]
@@ -232,7 +232,7 @@
     "name": "Blueberry Scone",
     "category": "food",
     "basePrice": 140,
-    "image": "/assets/images/blueberry-scone.png",
+    "image": "assets/images/blueberry-scone.png",
     "description": "Bursting with juicy blueberries, our scone is crumbly and sweet. It's a classic bakery item, perfect with tea. Enjoy the homemade taste in every bite.",
     "options": {
       "size": ["Small", "Medium", "Large"]
@@ -244,7 +244,7 @@
     "name": "Almond Cookie",
     "category": "food",
     "basePrice": 90,
-    "image": "/assets/images/almond-cookie.png",
+    "image": "assets/images/almond-cookie.png",
     "description": "Crunchy almonds embedded in soft cookie dough, simply delightful. It's nutty and sweet, a perfect small treat. Baked to golden perfection.",
     "options": {
       "size": ["Small", "Medium", "Large"]
@@ -255,7 +255,7 @@
     "name": "Fruit Tart",
     "category": "food",
     "basePrice": 300,
-    "image": "/assets/images/fruit-tart.png",
+    "image": "assets/images/fruit-tart.png",
     "description": "Seasonal fruits atop creamy custard in a crisp shell. It's vibrant and refreshing, a dessert highlight. Indulge in the fresh, tangy sweetness.",
     "options": {
       "size": ["Small", "Medium", "Large"]

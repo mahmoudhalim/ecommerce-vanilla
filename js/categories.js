@@ -25,7 +25,7 @@ class CategoriesPage {
 
   async loadProducts() {
     try {
-      const response = await fetch('/assets/products.json');
+      const response = await fetch('assets/products.json');
       this.allProducts = await response.json();
       this.filteredProducts = [...this.allProducts];
     } catch (error) {

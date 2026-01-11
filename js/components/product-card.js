@@ -74,7 +74,7 @@ class ProductCard extends HTMLElement {
   }
 
 function navigateToProduct(productId) {
-  window.location.href = `/product.html?id=${productId}`;
+  window.location.href = `product.html?id=${productId}`;
 }
 
 customElements.define("product-card", ProductCard);

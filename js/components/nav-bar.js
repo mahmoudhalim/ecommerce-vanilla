@@ -5,7 +5,7 @@ class Navbar extends HTMLElement {
     
     this.innerHTML = `<nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a href="/" class="navbar-brand">
+        <a href="index.html" class="navbar-brand">
           <img src="assets/images/logo.png" width="100" />
         </a>
 

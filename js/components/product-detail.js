@@ -82,7 +82,7 @@ class ProductDetailController {
       }
 
       // Load products from JSON
-      const response = await fetch('/assets/products.json');
+      const response = await fetch('assets/products.json');
       const products = await response.json();
       
       // Find the specific product
@@ -187,7 +187,7 @@ function updateNavbarCartCount() {
 
 
 function goBack() {
-  window.location.href = '/index.html';
+  window.location.href = 'index.html';
 }
 
 // Initialize when DOM is loaded

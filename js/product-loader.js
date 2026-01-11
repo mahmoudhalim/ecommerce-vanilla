@@ -9,7 +9,7 @@ class ProductLoader {
 
   async init() {
     try {
-      const response = await fetch('/assets/products.json');
+      const response = await fetch('assets/products.json');
       this.products = await response.json();
       this.renderProducts();
       this.setupCarouselControls();
