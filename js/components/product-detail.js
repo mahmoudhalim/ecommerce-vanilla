@@ -138,20 +138,53 @@ class ProductDetailController {
 
 // Global functions for button actions
 function addToCart() {
-  const size = document.getElementById('size-option').value;
+  if (!window.cartManager || !window.cartManager.isLoggedIn()) {
+    alert('Please sign in to add items to cart');
+    window.location.href = 'login.html';
+    return;
+  }
+
+  const size = document.getElementById('size-option').value.toLowerCase();
   const milk = document.getElementById('milk-option')?.value || 'N/A';
   const temperature = document.getElementById('temperature-option')?.value || 'N/A';
   
-  console.log('Added to cart:', {
-    product: window.productController.product.name,
-    size,
-    milk,
-    temperature
-  });
+  const options = {
+    size: size,
+    milk: milk !== 'N/A' ? milk.toLowerCase() : undefined,
+    temperature: temperature !== 'N/A' ? temperature.toLowerCase() : undefined
+  };
+
+  // Remove undefined values from options
+  Object.keys(options).forEach(key => options[key] === undefined && delete options[key]);
   
-  // Show success message
-  alert('Product added to cart!');
+  const success = window.cartManager.addToCart(window.productController.product, options);
+  
+  if (success) {
+    // Show success feedback without animation
+    const button = document.querySelector('.product-actions .btn-primary');
+    const originalText = button.innerHTML;
+    button.innerHTML = '<i class="bi bi-check-circle"></i> Added!';
+    button.classList.remove('btn-primary');
+    button.classList.add('btn-success');
+    
+    // Update navbar cart count
+    updateNavbarCartCount();
+    
+    setTimeout(() => {
+      button.innerHTML = originalText;
+      button.classList.remove('btn-success');
+      button.classList.add('btn-primary');
+    }, 2000);
+  }
 }
+
+function updateNavbarCartCount() {
+    const navbar = document.querySelector('nav-bar');
+    if (navbar && navbar.updateCartCount) {
+        navbar.updateCartCount();
+    }
+}
+
 
 function goBack() {
   window.location.href = '/index.html';
